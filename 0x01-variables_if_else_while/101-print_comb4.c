@@ -10,18 +10,18 @@ int main(void)
 	int b = '0';
 	int c = '0';
 
-	for (a = '0'; a <= '9'; a++)
+	for (c = '0'; c <= '9'; c++)
 	{
 		for (b = '0';  b <= '9'; b++)
 		{
-			for (c = '0'; c <= '9'; c++)
+			for (a = '0'; a <= '9'; a++)
 			{
-				if (!((a == b) || (b == c) || (a < b) || (b < c)))
+				if (!((a == b) || (b == c) || (b > a) || (c > b)))
 				{
-					putchar(a);
-					putchar(b);
 					putchar(c);
-					if (!(a == '9' && b == '8' && c == '7'))
+					putchar(b);
+					putchar(a);
+					if (!(a == '9' && c == '7' && b == '8'))
 					{
 						putchar(',');
 						putchar(' ');
